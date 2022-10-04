@@ -1,0 +1,13 @@
+.hero {
+  display: flex;
+  width: 70%;
+  margin: 0 auto 0;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 1090px) {
+  .hero {
+    flex-direction: column;
+    row-gap: 4rem;
+  }
+}

@@ -1,0 +1,15 @@
+.container {
+  max-width: 200px;
+  font-weight: var(--fw-medium);
+  font-family: var(--ff-primary);
+  font-size: var(--fs-600);
+  line-height: 55px;
+}
+.num1 {
+  font-weight: var(--fw-extrabold);
+  background-color: var(--clr-primary-600);
+  max-width: 65px;
+  border-radius: 10px;
+  padding: 0 0 0 4px;
+  line-height: 50px;
+}
