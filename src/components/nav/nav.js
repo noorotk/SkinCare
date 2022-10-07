@@ -1,11 +1,11 @@
 import React from "react";
 import classes from "./nav.module.css";
 import SideDrawer from "./SideDrawer/SideDrawer";
-const nav = () => {
+const nav = (props) => {
   return (
     <div className={classes.nav}>
       <div className={classes.logo}>SkinCare</div>
-      <SideDrawer />
+      <SideDrawer open={props.open} show={props.show} />
       <ul className={classes.ulFlex}>
         <li className={classes.li}>About</li>
         <li className={classes.li}>Products</li>

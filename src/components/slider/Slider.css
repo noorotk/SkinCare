@@ -1,17 +1,12 @@
 .container-slider {
   max-width: 320px;
   height: 390px;
-
-  margin: 100px auto 0;
+  margin: 0 auto 0;
 
   position: relative;
   overflow: hidden;
 }
-@media screen and (max-width: 700px) {
-  .container-slider {
-    margin: 100px 10px 0;
-  }
-}
+
 .slide {
   width: 100%;
   height: 100%;
@@ -34,6 +29,7 @@
   border: none;
   position: absolute;
   display: flex;
+  background-color: transparent;
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -48,4 +44,40 @@
   top: 50%;
   right: 0px;
   transform: translateY(-60%);
+}
+.productName {
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-300);
+  text-align: center;
+}
+.productInfo {
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-100);
+  max-width: 500px;
+  text-align: start;
+  max-width: 500px;
+  margin: 1.5rem 0 0 2rem;
+}
+.AddtoCartBtn {
+  border-style: none;
+  color: black;
+  background-color: var(--clr-primary-600);
+  border: none;
+  border-radius: 25px;
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-100);
+  padding: 8px 45px;
+  align-items: center;
+  position: relative;
+  left: 5.5rem;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.btn-slide:hover {
+  background-color: transparent;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import "./heroTitle.css";
+import SignUpBtn from "./signUpBtn";
 const heroTitle = () => {
   return (
     <div className="container">
@@ -7,8 +8,7 @@ const heroTitle = () => {
       <h1>Dermatologist Recommended Products</h1>
 
       <br></br>
-
-      <div>sing up button</div>
+      <SignUpBtn />
     </div>
   );
 };

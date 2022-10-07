@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "../slider/slider";
 import "./introContainer.css";
 
-const introContainer = () => {
+const IntroContainer = () => {
   return (
     <div className="introContainer">
       <Slider />
@@ -10,4 +10,4 @@ const introContainer = () => {
   );
 };
 
-export default introContainer;
+export default IntroContainer;

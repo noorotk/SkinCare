@@ -1,0 +1,45 @@
+.sideBar {
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+@media screen and (min-width: 1150px) {
+  .sideBar {
+    display: none;
+  }
+  .sideDrawer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sideBar {
+    position: relative;
+    left: 2rem;
+    transition: 0.5s;
+  }
+}
+.sideBar:hover {
+  opacity: 0.5;
+}
+
+.sideDrawer {
+  position: fixed;
+  width: 480px;
+  max-width: 70%;
+  height: 90%;
+  right: 1rem;
+  top: 5%;
+  border-radius: 25px;
+  z-index: 400;
+  background-color: var(--clr-primary-600);
+  padding: 32px 16px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease-out;
+}
+.Open {
+  transform: translateX(0);
+}
+.Close {
+  transform: translateX(110%);
+}

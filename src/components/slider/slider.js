@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import "./Slider.css";
 import BtnSlider from "./BtnSlider";
 import dataSlider from "./dataSlider";
+import { AddtoCartBtn } from "./AddtoCartBtn";
 
 export default function Slider() {
   const [slideIndex, setSlideIndex] = useState(1);
@@ -22,23 +23,40 @@ export default function Slider() {
     }
   };
 
+  const info = [];
+  Object.values(dataSlider[slideIndex - 1].subTitle).forEach((val) =>
+    info.push(val)
+  );
+
   return (
-    <div className="container-slider">
-      {dataSlider.map((obj, index) => {
-        return (
-          <div
-            key={obj.id}
-            className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
-          >
-            <img
-              alt="cerave moist"
-              src={`heroSliderPics/pic-${index + 1}.png`}
-            />
-          </div>
-        );
-      })}
-      <BtnSlider moveSlide={nextSlide} direction={"next"} />
-      <BtnSlider moveSlide={prevSlide} direction={"prev"} />
-    </div>
+    <Fragment>
+      <div className="container-slider">
+        {dataSlider.map((obj, index) => {
+          return (
+            <div
+              key={obj.id}
+              className={
+                slideIndex === index + 1 ? "slide active-anim" : "slide"
+              }
+            >
+              <img
+                alt="cerave moist"
+                src={`heroSliderPics/pic-${index + 1}.png`}
+              />
+            </div>
+          );
+        })}
+
+        <BtnSlider moveSlide={nextSlide} direction={"next"} />
+        <BtnSlider moveSlide={prevSlide} direction={"prev"} />
+      </div>
+      <div className="productName">{dataSlider[slideIndex - 1].title}</div>
+      <div className="productInfo">
+        {info.map((value) => {
+          return <div>{value}</div>;
+        })}
+      </div>
+      <AddtoCartBtn />
+    </Fragment>
   );
 }

@@ -1,9 +1,19 @@
-import React from "react";
-import classes from "./SideDrawer.module.css";
-const SideDrawer = () => {
+import { useState } from "react";
+import "./SideDrawer.css";
+const SideDrawer = (props) => {
+  console.log(props.open);
+
+  let attachedClasses = "Close";
+
+  if (props.open) {
+    attachedClasses = "Open";
+  }
+  console.log(attachedClasses);
   return (
-    <div className={classes.sideBar}>
+    <div>
       <svg
+        className={"sideBar"}
+        onClick={props.show}
         width="35"
         height="35"
         viewBox="0 0 35 35"
@@ -27,6 +37,7 @@ const SideDrawer = () => {
           fill="black"
         />
       </svg>
+      <div className={`sideDrawer ${attachedClasses}`}></div>
     </div>
   );
 };
