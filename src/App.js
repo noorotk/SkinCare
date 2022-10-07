@@ -4,7 +4,8 @@ import Backdrop from "./components/backdrop/Backdrop";
 import { useState } from "react";
 import Hero from "./components/hero/hero";
 import Nav from "./components/nav/nav";
-
+import FeaturesSection from "./components/featuresSection/featuresSection";
+import Footer from "./components/footer/footer";
 function App() {
   const [sideDrawer, setsideDrawer] = useState(false);
 
@@ -23,7 +24,8 @@ function App() {
       </div>
       <Hero />
 
-      <button className="ShopBtn">Shop</button>
+      <FeaturesSection />
+      <Footer />
     </Fragment>
   );
 }

@@ -18,7 +18,7 @@ button:hover {
   font-family: var(--ff-primary);
   text-decoration: none;
   margin: 0 0 0 4rem;
-  position: relative;
+  position: fixed;
 
   transition-duration: 0.4s;
   cursor: pointer;
@@ -26,5 +26,10 @@ button:hover {
 @media screen and (max-width: 1150px) {
   .ShopBtn {
     bottom: 2rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .ShopBtn {
+    display: none;
   }
 }
