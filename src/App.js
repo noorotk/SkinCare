@@ -6,6 +6,7 @@ import Hero from "./components/hero/hero";
 import Nav from "./components/nav/nav";
 import FeaturesSection from "./components/featuresSection/featuresSection";
 import Footer from "./components/footer/footer";
+import Shop from "./components/Shop/Shop";
 function App() {
   const [sideDrawer, setsideDrawer] = useState(false);
 
@@ -25,6 +26,7 @@ function App() {
       <Hero />
 
       <FeaturesSection />
+      <Shop />
       <Footer />
     </Fragment>
   );
