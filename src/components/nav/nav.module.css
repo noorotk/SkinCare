@@ -22,7 +22,6 @@
 .li:hover {
   background-color: var(--clr-primary-600);
   border-radius: 25px;
-
   transition: ease 0.3s;
 }
 

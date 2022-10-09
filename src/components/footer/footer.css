@@ -77,6 +77,9 @@
     height: 25;
     width: 25;
   }
+  .footerLogo {
+    font-size: var(--fs-500);
+  }
 }
 .Endfooter {
   display: flex;
