@@ -11,8 +11,8 @@ const SocialMedia = () => {
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
+          fillRule="evenodd"
+          clipRule="evenodd"
           d="M32.8125 17.5923C32.8125 9.13623 25.9561 2.27979 17.5 2.27979C9.04395 2.27979 2.1875 9.13623 2.1875 17.5923C2.1875 25.2349 7.78613 31.5697 15.1074 32.7195V22.0199H11.2185V17.5923H15.1074V14.2188C15.1074 10.3817 17.394 8.26055 20.8913 8.26055C22.5668 8.26055 24.3195 8.55996 24.3195 8.55996V12.3286H22.3877C20.4866 12.3286 19.8919 13.5085 19.8919 14.7212V17.5923H24.1384L23.4603 22.0199H19.8926V32.7209C27.2139 31.5718 32.8125 25.2369 32.8125 17.5923Z"
           fill="black"
         />
@@ -40,13 +40,13 @@ const SocialMedia = () => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_11_265)">
+        <g clipPath="url(#clip0_11_265)">
           <path
             d="M17.5 12.0313C17.5 9.02345 20.0293 6.52149 23.0371 6.56251C24.0905 6.57467 25.1179 6.8908 25.9959 7.47289C26.8739 8.05498 27.565 8.87826 27.9863 9.84376H32.8125L28.3965 14.2598C28.1115 18.6957 26.1478 22.8566 22.9048 25.8965C19.6617 28.9365 15.3826 30.6272 10.9375 30.625C6.5625 30.625 5.46875 28.9844 5.46875 28.9844C5.46875 28.9844 9.84375 27.3438 12.0313 24.0625C12.0313 24.0625 3.28125 19.6875 5.46875 7.65626C5.46875 7.65626 10.9375 13.125 17.5 14.2188V12.0313Z"
             stroke="black"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </g>
         <defs>
@@ -62,20 +62,20 @@ const SocialMedia = () => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_11_268)">
+        <g clipPath="url(#clip0_11_268)">
           <path
             d="M4.375 7.65625H30.625V26.25C30.625 26.5401 30.5098 26.8183 30.3046 27.0234C30.0995 27.2285 29.8213 27.3438 29.5312 27.3438H5.46875C5.17867 27.3438 4.90047 27.2285 4.69535 27.0234C4.49023 26.8183 4.375 26.5401 4.375 26.25V7.65625Z"
             stroke="black"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M30.625 7.65625L17.5 19.6875L4.375 7.65625"
             stroke="black"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </g>
         <defs>

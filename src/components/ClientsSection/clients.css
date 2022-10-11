@@ -1,0 +1,104 @@
+.clients h1 {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-700);
+  font-weight: var(--fw-bold);
+  text-align: center;
+  margin-bottom: 2rem;
+  background-color: var(--clr-primary-600);
+}
+.clients {
+  margin-top: 10rem;
+}
+.clientssvg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.clientssvg svg {
+  flex: 1 1 250px;
+  margin: 1rem 0 1rem 0;
+}
+
+@media screen and (max-width: 950px) {
+  .clients h1 {
+    margin-bottom: 5rem;
+  }
+}
+
+.getintouchWraper {
+  width: 100%;
+  height: fit-content;
+  background-color: var(--clr-primary-600);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 3rem;
+}
+.getintouchWraper h1 {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-800);
+  font-weight: var(--fw-bold);
+  max-width: 300px;
+  line-height: 7rem;
+}
+.getintouchWraper p {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-200);
+  font-weight: var(--fw-medium);
+  max-width: 300px;
+}
+.forms {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+input[type="text"] {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-100);
+  font-weight: var(--fw-medium);
+
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border-radius: 25px;
+  box-sizing: border-box;
+  border: none;
+  background-color: var(--clr-primary-600);
+  border: 3px solid var(--clr-primary-500);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  background-color: var(--clr-primary-500);
+}
+
+input[type="submit"] {
+  transition: ease-out 0.5s;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-100);
+  font-weight: var(--fw-medium);
+  width: 50%;
+
+  background-color: var(--clr-primary-600);
+  border: 3px solid var(--clr-primary-500);
+
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--clr-primary-500);
+}
+@media screen and (max-width: 710px) {
+  .getintouchWraper {
+    align-items: center;
+    flex-direction: column;
+  }
+}

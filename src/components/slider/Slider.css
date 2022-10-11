@@ -61,10 +61,9 @@
   margin: 1.5rem 0 0 2rem;
 }
 .AddtoCartBtn {
-  border-style: none;
   color: black;
-  background-color: var(--clr-primary-600);
-  border: none;
+  background-color: var(--clr-primary-500);
+  border: 3px solid var(--clr-primary-600);
   border-radius: 25px;
   font-family: var(--ff-primary);
   font-weight: var(--fw-bold);
@@ -77,6 +76,9 @@
   margin-top: 1rem;
   transition-duration: 0.4s;
   cursor: pointer;
+}
+.AddtoCartBtn:hover {
+  background-color: var(--clr-primary-600);
 }
 .btn-slide:hover {
   background-color: transparent;

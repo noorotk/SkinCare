@@ -4,9 +4,9 @@
   margin: 5rem auto 3rem;
 
   width: 90%;
-  height: 800px;
+  height: fit-content;
   display: flex;
-  margin-bottom: 25rem;
+  margin-bottom: 5rem;
 
   align-items: center;
   flex-direction: column;
@@ -97,8 +97,8 @@
 .Add-toCartBtn {
   border-style: none;
   color: black;
-  background-color: var(--clr-primary-500);
-  border: none;
+  background-color: var(--clr-primary-600);
+  border: 3px solid var(--clr-primary-500);
   border-radius: 25px;
   font-family: var(--ff-primary);
   font-weight: var(--fw-bold);
@@ -110,6 +110,9 @@
   margin-top: 1rem;
   transition-duration: 0.4s;
   cursor: pointer;
+}
+.Add-toCartBtn:hover {
+  background-color: var(--clr-primary-500);
 }
 @media screen and (max-width: 1070px) {
   .shopContent {

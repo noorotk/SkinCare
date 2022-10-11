@@ -18,10 +18,9 @@
   border-radius: 25px;
 }
 .singUpBtnContainer button {
-  border-style: none;
   color: black;
-  background-color: var(--clr-primary-500); /* Green */
-  border: none;
+  background-color: var(--clr-primary-600);
+  border: 3px solid var(--clr-primary-500);
   border-radius: 25px;
   width: 175px;
   height: 50px;
@@ -33,5 +32,5 @@
   cursor: pointer;
 }
 .button:hover {
-  background-color: white;
+  background-color: var(--clr-primary-500);
 }

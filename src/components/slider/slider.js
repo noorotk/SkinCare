@@ -1,10 +1,13 @@
 import React, { Fragment, useState } from "react";
 import "./Slider.css";
+import { v4 as uuidv4 } from "uuid";
+
 import BtnSlider from "./BtnSlider";
 import dataSlider from "./dataSlider";
 import { AddtoCartBtn } from "./AddtoCartBtn";
 
-export default function Slider() {
+export default function Slider(props) {
+  const { onAdd } = props;
   const [slideIndex, setSlideIndex] = useState(1);
 
   const nextSlide = () => {
@@ -34,7 +37,7 @@ export default function Slider() {
         {dataSlider.map((obj, index) => {
           return (
             <div
-              key={obj.id}
+              key={obj.key}
               className={
                 slideIndex === index + 1 ? "slide active-anim" : "slide"
               }
@@ -53,10 +56,10 @@ export default function Slider() {
       <div className="productName">{dataSlider[slideIndex - 1].title}</div>
       <div className="productInfo">
         {info.map((value) => {
-          return <div>{value}</div>;
+          return <div key={uuidv4()}>{value}</div>;
         })}
       </div>
-      <AddtoCartBtn />
+      <AddtoCartBtn onAdd={onAdd} product={dataSlider[slideIndex - 1]} />
     </Fragment>
   );
 }

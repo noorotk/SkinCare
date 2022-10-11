@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import Slider from "../slider/slider";
 import "./introContainer.css";
 
-const IntroContainer = () => {
+const IntroContainer = (props) => {
+  const { onAdd } = props;
   return (
     <div className="introContainer">
-      <Slider />
+      <Slider onAdd={onAdd} />
     </div>
   );
 };

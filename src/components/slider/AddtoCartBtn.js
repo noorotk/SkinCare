@@ -1,9 +1,12 @@
 import React from "react";
 
-export const AddtoCartBtn = () => {
+export const AddtoCartBtn = (props) => {
+  const { onAdd, product } = props;
   return (
     <div>
-      <button className="AddtoCartBtn">Add to cart</button>
+      <button onClick={() => onAdd(product)} className="AddtoCartBtn">
+        Add to cart
+      </button>
     </div>
   );
 };

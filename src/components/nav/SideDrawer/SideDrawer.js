@@ -1,14 +1,11 @@
-import { useState } from "react";
 import "./SideDrawer.css";
 const SideDrawer = (props) => {
-  console.log(props.open);
-
   let attachedClasses = "Close";
 
   if (props.open) {
     attachedClasses = "Open";
   }
-  console.log(attachedClasses);
+
   return (
     <div>
       <svg

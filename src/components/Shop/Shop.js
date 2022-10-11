@@ -3,14 +3,15 @@ import "./shop.css";
 import ShopSign from "./shopSign";
 import ShopCategories from "./shop categories/shopCategories";
 import Products from "./shopProducts/products";
-const Shop = () => {
+const Shop = (props) => {
+  const { onAdd } = props;
   return (
     <div className="shop">
       <ShopSign />
 
       <div className="shopContent">
         <ShopCategories />
-        <Products />
+        <Products onAdd={onAdd} />
       </div>
     </div>
   );

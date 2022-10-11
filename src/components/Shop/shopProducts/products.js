@@ -1,15 +1,17 @@
 import React from "react";
 import { AddtoCartBtn } from "./AddtoCartBtn";
 import data from "./CleansersData";
-const products = () => {
+const products = (props) => {
+  const { onAdd } = props;
+
   return (
     <div className="Shop-container">
       {data.map((obj, index) => {
         return (
-          <div className="products">
-            <img alt="cerave moist" src={obj.src} />
+          <div key={obj.key} className="products">
+            <img alt={obj.title} src={obj.src} />
             <h1>{obj.title}</h1>
-            <AddtoCartBtn />
+            <AddtoCartBtn product={data[index]} onAdd={onAdd} />
           </div>
         );
       })}
