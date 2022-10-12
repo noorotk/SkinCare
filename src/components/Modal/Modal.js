@@ -14,8 +14,25 @@ const Modal = (props) => {
           opacity: props.show ? "1" : "0",
         }}
       >
+        <button className={classes.closeBtn}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="ionicon"
+            viewBox="0 0 512 512"
+          >
+            <title>Close</title>
+            <path
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="32"
+              d="M368 368L144 144M368 144L144 368"
+            />
+          </svg>
+        </button>
         {cartItems.length === 0 ? (
-          <div>Cart is empty</div>
+          <div className={classes.empty}>Cart is empty</div>
         ) : (
           <div>
             {cartItems.map((obj, index) => {
@@ -24,7 +41,13 @@ const Modal = (props) => {
                   <img alt={obj.title} src={obj.src} />
                   <h1>{obj.title}</h1>
                   <div>{obj.price}$</div>
-                  <div>Quantity:{obj.qty}</div>
+                  <div className={classes.Qty}>
+                    <div>Quantity:{obj.qty}</div>
+                    <div>
+                      <button>-</button>
+                      <button>+</button>
+                    </div>
+                  </div>
                 </div>
               );
             })}

@@ -1,23 +1,17 @@
 import React from "react";
 import classes from "./nav.module.css";
 import SideDrawer from "./SideDrawer/SideDrawer";
-
+import NavItems from "./navItems";
+import ShoppinCartIcon from "./ShoppinCartIcon";
 const nav = (props) => {
   return (
-    <div className={classes.nav}>
-      <div className={classes.logo}>
+    <div className={classes.navContainer}>
+      <NavItems showModal={props.showModal} />
+      <div className={classes.logoRES}>
         <img alt="logo" src="Logo.png" />
       </div>
+      <ShoppinCartIcon active showModal={props.showModal} />
       <SideDrawer open={props.open} show={props.show} />
-      <ul className={classes.ulFlex}>
-        <li className={classes.li}>About</li>
-        <li className={classes.li}>Products</li>
-        <li className={classes.li}>Contact</li>
-      </ul>
-      <div className={classes.rightButtons}>
-        <div className={classes.shoppingCart} onClick={props.showModal}></div>
-        <button className={classes.button}>Log in</button>
-      </div>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import "./SideDrawer.css";
+import NavItems from "../navItems";
 const SideDrawer = (props) => {
   let attachedClasses = "Close";
 
@@ -34,7 +35,9 @@ const SideDrawer = (props) => {
           fill="black"
         />
       </svg>
-      <div className={`sideDrawer ${attachedClasses}`}></div>
+      <div className={`sideDrawer ${attachedClasses}`}>
+        <NavItems sideDrawer />
+      </div>
     </div>
   );
 };
