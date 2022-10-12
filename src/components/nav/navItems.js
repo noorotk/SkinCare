@@ -7,9 +7,7 @@ const navItems = (props) => {
     return (
       <div className={classes.navSide}>
         <div className={classes.sideDrawerHeader}>
-          <div className={classes.logo}>
-            <img alt="logo" src="Logo.png" />
-          </div>
+          <div className={classes.logo}></div>
           <button className={classes.button}>Log in</button>
         </div>
         <ul className={classes.ulFlex}>

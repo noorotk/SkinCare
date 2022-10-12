@@ -33,33 +33,35 @@ export default function Slider(props) {
 
   return (
     <Fragment>
-      <div className="container-slider">
-        {dataSlider.map((obj, index) => {
-          return (
-            <div
-              key={obj.key}
-              className={
-                slideIndex === index + 1 ? "slide active-anim" : "slide"
-              }
-            >
-              <img
-                alt="cerave moist"
-                src={`heroSliderPics/pic-${index + 1}.png`}
-              />
-            </div>
-          );
-        })}
+      <div className="big-Container">
+        <div className="container-slider">
+          {dataSlider.map((obj, index) => {
+            return (
+              <div
+                key={obj.key}
+                className={
+                  slideIndex === index + 1 ? "slide active-anim" : "slide"
+                }
+              >
+                <img
+                  alt="cerave moist"
+                  src={`heroSliderPics/pic-${index + 1}.png`}
+                />
+              </div>
+            );
+          })}
 
-        <BtnSlider moveSlide={nextSlide} direction={"next"} />
-        <BtnSlider moveSlide={prevSlide} direction={"prev"} />
+          <BtnSlider moveSlide={nextSlide} direction={"next"} />
+          <BtnSlider moveSlide={prevSlide} direction={"prev"} />
+        </div>
+        <div className="productName">{dataSlider[slideIndex - 1].title}</div>
+        <div className="productInfo">
+          {info.map((value) => {
+            return <div key={uuidv4()}>{value}</div>;
+          })}
+        </div>
+        <AddtoCartBtn onAdd={onAdd} product={dataSlider[slideIndex - 1]} />
       </div>
-      <div className="productName">{dataSlider[slideIndex - 1].title}</div>
-      <div className="productInfo">
-        {info.map((value) => {
-          return <div key={uuidv4()}>{value}</div>;
-        })}
-      </div>
-      <AddtoCartBtn onAdd={onAdd} product={dataSlider[slideIndex - 1]} />
     </Fragment>
   );
 }

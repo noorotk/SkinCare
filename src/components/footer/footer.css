@@ -2,7 +2,7 @@
   width: 100%;
   height: fit-content;
   margin-top: 5rem;
-
+  overflow: hidden;
   display: flex;
   padding: 4rem 10rem 2rem 10rem;
   justify-content: space-between;

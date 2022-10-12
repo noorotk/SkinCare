@@ -29,6 +29,7 @@
   padding-inline: 2rem;
   margin-inline: auto;
 }
+
 .shopContent {
   width: 80%;
   height: fit-content;
@@ -72,6 +73,7 @@
 }
 .Shop-container {
   padding: 1rem;
+  width: fit-content;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
@@ -82,8 +84,8 @@
 .products {
   border-radius: 25px;
   background-color: var(--clr-primary-600);
-  width: 280px;
-  height: 370px;
+  width: fit-content;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;

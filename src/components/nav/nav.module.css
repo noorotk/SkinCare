@@ -24,6 +24,8 @@
   justify-content: space-between;
 }
 .logoRES {
+  position: relative;
+  right: 1rem;
   width: 80px;
   cursor: pointer;
 }
