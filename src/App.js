@@ -1,7 +1,8 @@
-import { Fragment } from "react";
+import React, { Fragment } from "react";
 import "./App.css";
 import Backdrop from "./components/backdrop/Backdrop";
 import { useState } from "react";
+
 import Hero from "./components/hero/hero";
 import Nav from "./components/nav/nav";
 import FeaturesSection from "./components/featuresSection/featuresSection";
@@ -9,7 +10,7 @@ import Footer from "./components/footer/footer";
 import Shop from "./components/Shop/Shop";
 import Container from "./components/ClientsSection/container";
 import Modal from "./components/Modal/Modal";
-import products from "./components/Shop/shopProducts/products";
+
 function App() {
   const [sideDrawer, setsideDrawer] = useState(false);
   const [ShowModal, setShowModal] = useState(false);
@@ -51,10 +52,23 @@ function App() {
       <div className="interFace">
         <Nav open={sideDrawer} show={opensideDrawer} showModal={openModal} />
       </div>
+
       <Hero onAdd={onAdd} />
 
+      {/* <div>
+        {!intersection ? "not me" : "its me!"}
+
+        <img
+          ref={targetRef}
+          alt="cerave moist"
+          src={`heroSliderPics/pic-2.png`}
+        />
+      </div> */}
+
       <FeaturesSection />
+
       <Shop onAdd={onAdd} />
+
       <Container />
       <Footer />
     </Fragment>

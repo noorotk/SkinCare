@@ -5,6 +5,7 @@ import Herotitle from "./heroTitle/heroTitle";
 
 const hero = (props) => {
   const { onAdd } = props;
+
   return (
     <div className="hero">
       <Herotitle />

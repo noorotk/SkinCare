@@ -13,7 +13,8 @@ const Modal = (props) => {
           transform: props.show ? "translateY(0)" : "translateY(-100vh)",
           opacity: props.show ? "1" : "0",
         }}
-      >
+      ><div className={classes.btnflex}>
+        <div></div>
         <button className={classes.closeBtn}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +31,7 @@ const Modal = (props) => {
               d="M368 368L144 144M368 144L144 368"
             />
           </svg>
-        </button>
+        </button></div>
         {cartItems.length === 0 ? (
           <div className={classes.empty}>Cart is empty</div>
         ) : (

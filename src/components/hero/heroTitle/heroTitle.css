@@ -4,7 +4,7 @@
   font-family: var(--ff-primary);
   font-size: var(--fs-600);
   line-height: 55px;
-  margin-left: 5rem;
+  padding-left: 4rem;
 }
 .num1 {
   font-weight: var(--fw-extrabold);
@@ -14,8 +14,13 @@
   padding: 0 0 0 4px;
   line-height: 50px;
 }
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1380px) {
   .container {
     margin-right: 13rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .container {
+    font-size: var(--fs-500);
   }
 }

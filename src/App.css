@@ -1,5 +1,4 @@
 body {
-  min-width: fit-content;
   background-color: var(--clr-primary-500);
 }
 
@@ -29,4 +28,14 @@ body {
   .ShopBtn {
     display: none;
   }
+}
+.show {
+  transition: ease-out 0.5s;
+  opacity: 1;
+  transform: translateY(0);
+}
+.hide {
+  transition: ease-out 0.5s;
+  opacity: 0;
+  transform: translateY(8rem);
 }

@@ -25,7 +25,7 @@
 }
 .logoRES {
   position: relative;
-  right: 1rem;
+  right: 2rem;
   width: 80px;
   cursor: pointer;
 }
@@ -149,5 +149,10 @@
     align-items: center;
     justify-content: space-evenly;
     column-gap: 3rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .navContainer {
+    padding-top: 2rem;
   }
 }
