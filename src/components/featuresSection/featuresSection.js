@@ -4,7 +4,7 @@ import FeaturesIcons from "./features Icons/featuresIcons";
 
 const FeaturesSection = (props) => {
   return (
-    <div>
+    <div id="About">
       <FeaturesIcons />
       <FeaturesHighlight />
     </div>

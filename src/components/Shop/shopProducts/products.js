@@ -1,17 +1,34 @@
 import React from "react";
 import { AddtoCartBtn } from "./AddtoCartBtn";
-import data from "./CleansersData";
+import Cleanserdata from "./CleansersData";
+import SerumData from "./MoistData";
+import SunscreenData from "./SunscreenData";
+import Moist from "./MoistData";
 const products = (props) => {
-  const { onAdd } = props;
+  const { onAdd, tap } = props;
+
+  let Type = Cleanserdata;
+  if (tap === 1) {
+    Type = Cleanserdata;
+  }
+  if (tap === 2) {
+    Type = Moist;
+  }
+  if (tap === 3) {
+    Type = SunscreenData;
+  }
+  if (tap === 4) {
+    Type = SerumData;
+  }
 
   return (
     <div className="Shop-container">
-      {data.map((obj, index) => {
+      {Type.map((obj, index) => {
         return (
           <div key={obj.key} className="products">
             <img alt={obj.title} src={obj.src} />
             <h1>{obj.title}</h1>
-            <AddtoCartBtn product={data[index]} onAdd={onAdd} />
+            <AddtoCartBtn product={Type[index]} onAdd={onAdd} />
           </div>
         );
       })}

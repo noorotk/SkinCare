@@ -1,5 +1,6 @@
 body {
   background-color: var(--clr-primary-500);
+  overflow-x: hidden;
 }
 
 .ShopBtn {

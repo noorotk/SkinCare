@@ -3,7 +3,12 @@ import classes from "./nav.module.css";
 import SideDrawer from "./SideDrawer/SideDrawer";
 import NavItems from "./navItems";
 import ShoppinCartIcon from "./ShoppinCartIcon";
-const nav = (props) => {
+
+import "react-js-stickynav/dist/index.css";
+
+import { Link } from "react-scroll";
+
+const Nav = (props) => {
   return (
     <div className={classes.navContainer}>
       <NavItems showModal={props.showModal} />
@@ -16,4 +21,4 @@ const nav = (props) => {
   );
 };
 
-export default nav;
+export default Nav;

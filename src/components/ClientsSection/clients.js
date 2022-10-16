@@ -1,19 +1,12 @@
 import React from "react";
 import "./clients.css";
-import useElementOnScreen from "../hooks/useElementOnScreen";
+import { useInView } from "react-intersection-observer";
+
 const Clients = () => {
-  const [containerRef, isVisible] = useElementOnScreen({
-    root: null,
-
-    threshold: 0.2,
-  });
-
-  const observeClass = [];
-  isVisible ? observeClass.push("show") : observeClass.push("hide");
-
+  const { ref, inView } = useInView({ triggerOnce: true });
   return (
-    <div className={observeClass}>
-      <div ref={containerRef} className="clients">
+    <div ref={ref} className={inView ? "show" : "hide"}>
+      <div className="clients">
         <h1>Clients</h1>
         <div className="clientssvg">
           <svg

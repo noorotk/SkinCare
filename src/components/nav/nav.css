@@ -1,0 +1,59 @@
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+  background-color: red;
+  z-index: 900;
+  position: relative;
+  left: 1.3rem;
+  top: 0.7rem;
+  font-family: var(--ff-primary);
+}
+.dot p {
+  color: white;
+  text-align: center;
+  position: relative;
+  bottom: 1px;
+}
+.dotfixed {
+  font-family: var(--ff-primary);
+
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+  background-color: red;
+  z-index: 1000;
+  position: relative;
+  left: 1.3rem;
+  top: 0.7rem;
+  position: fixed;
+  left: 48.3%;
+  top: 3.2%;
+}
+.dotfixed p {
+  color: white;
+  text-align: center;
+  position: relative;
+  bottom: 1px;
+}
+.dotfixedwide {
+  font-family: var(--ff-primary);
+
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+  background-color: red;
+  z-index: 1000;
+  position: relative;
+  left: 1.3rem;
+  top: 0.7rem;
+  position: fixed;
+  left: 50.5%;
+  top: 3.2%;
+}
+.dotfixedwide p {
+  color: white;
+  text-align: center;
+  position: relative;
+  bottom: 1px;
+}

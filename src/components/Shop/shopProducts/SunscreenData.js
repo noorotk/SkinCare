@@ -1,22 +1,22 @@
 import { v4 as uuidv4 } from "uuid";
 
-const data = [
+const SunscreenData = [
   {
     key: uuidv4(),
     id: "1",
-    title: "Cerave Foaming facial cleanser",
-    src: "cleanser/pic-1.png",
+    title: "Nivea sunscreen",
+    src: "sunscreen/pic-1.png",
     subTitle: {
-      1: "For Normal To Oily Skin",
-      2: "Cleanse & remove oil without disturpting the protective sking",
-      3: "With 3 Essential Ceramides & Hyaluronic Acid",
+      1: "OIL-FREE",
+      2: "Dry touch sunscreen",
+      3: "With CELL-OX SHIELD XL, UVA/UVB protection",
     },
   },
   {
     key: uuidv4(),
     id: "2",
-    title: "Cerave resurfacing retinol",
-    src: "cleanser/pic-2.png",
+    title: "Cerave Hydrating Sunscreen",
+    src: "heroSliderPics/pic-2.png",
     price: 33,
 
     subTitle: {
@@ -28,10 +28,10 @@ const data = [
   {
     key: uuidv4(),
     id: "3",
-    title: "the ordianry Resveratrol ",
+    title: "HydroBoost SPF30",
     price: 33,
 
-    src: "cleanser/pic-3.png",
+    src: "heroSliderPics/pic-3.png",
     subTitle: {
       1: "Light weight",
       2: "None-greasy feel",
@@ -41,9 +41,9 @@ const data = [
   {
     key: uuidv4(),
     id: "4",
-    title: "Hydro boost 30SPF",
+    title: "Cerave Foaming Cleanser",
     price: 33,
-    src: "cleanser/pic-4.png",
+    src: "heroSliderPics/pic-4.png",
     subTitle: {
       1: "Light weight",
       2: "None-greasy feel",
@@ -52,4 +52,4 @@ const data = [
   },
 ];
 
-export default data;
+export default SunscreenData;

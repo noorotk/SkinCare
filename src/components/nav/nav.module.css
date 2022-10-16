@@ -57,20 +57,61 @@
 
   justify-content: space-between;
 }
+.sticky {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
 .shoppingCart {
   padding: 5px;
   transition: ease 0.3s;
-
+  z-index: 900;
   margin-right: 1rem;
   cursor: pointer;
+  border-radius: 25px;
+  background-color: var(--clr-primary-600);
+  transition: all 0.3s ease-out;
 }
+
 .shoppingCart:hover {
   background-color: var(--clr-primary-600);
   border-radius: 25px;
 
   transition: ease 0.3s;
 }
+.shoppingCartfixed {
+  padding: 5px;
+  transition: ease 0.3s;
+  z-index: 900;
+  margin-right: 1rem;
+  cursor: pointer;
+  border-radius: 25px;
+  background-color: var(--clr-secondary-400);
+  top: 4%;
+  right: 47.5%;
+  position: fixed;
+  transition: all 0.3s ease-out;
+  border: 2px solid var(--clr-primary-600);
+  -webkit-box-shadow: -11px 14px 15px -8px rgba(0, 0, 0, 0.62);
+  box-shadow: -5px 14px 15px -8px rgba(0, 0, 0, 0.62);
+}
+@media screen and (max-width: 900px) {
+  .shoppingCartfixed {
+    right: 45%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .shoppingCartfixed {
+    right: 42%;
+  }
+}
+.shoppingCartfixed:hover {
+  background-color: var(--clr-primary-600);
+  border-radius: 25px;
 
+  transition: ease 0.3s;
+}
 .button {
   border-style: none;
   color: black;

@@ -25,7 +25,7 @@
   width: 25px;
   border: none;
   border-radius: 25px;
-  transition: ease-out 0.3s;
+  transition: ease-out 0.5s;
   background-color: var(--clr-primary-500);
   border: 2px solid var(--clr-primary-500);
 

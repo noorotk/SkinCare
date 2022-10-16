@@ -1,11 +1,18 @@
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+a {
+  text-decoration: none;
+}
 .footer {
   width: 100%;
   height: fit-content;
   margin-top: 5rem;
   overflow: hidden;
   display: flex;
-  padding: 4rem 10rem 2rem 10rem;
-  justify-content: space-between;
+  padding: 4rem 10rem 4rem 5rem;
+  justify-content: space-evenly;
 }
 
 .footerLogo {
@@ -19,17 +26,57 @@
   font-weight: var(--fw-medium);
   text-align: center;
 }
+.SocialMediaLogos:hover {
+  cursor: pointer;
+  background-color: var(--clr-primary-600);
+  border-radius: 25px;
+  width: fit-content;
+  padding: 0.3rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+.SocialMediaLogos svg:hover {
+  transition: ease-out 0.3s;
+  border-radius: 25px;
+
+  background-color: var(--clr-primary-500);
+}
+.SocialMediaLogos svg {
+  transition: ease-out 0.3s;
+}
 .SocialMediaLogos {
+  padding: 0.3rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  transition: ease-out 0.3s;
+
   display: flex;
+  min-width: fit-content;
   justify-content: space-between;
   align-items: center;
-  margin-top: 6rem;
+  column-gap: 1rem;
+  margin: 2rem auto 1rem;
 }
 .footerBtns button {
+  cursor: pointer;
   border: none;
   background-color: transparent;
+  transition: ease-out 0.3s;
+}
+.footerBtns button:hover {
+  transition: ease-out 0.3s;
+  background-color: var(--clr-primary-500);
+  border-radius: 25px;
+}
+.footerLogos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .footerBtns {
+  background-color: var(--clr-primary-600);
+  border-radius: 25px;
+  padding: 1rem;
   font-family: var(--ff-primary);
   font-weight: var(--fw-bold);
   font-size: var(--fs-200);
@@ -52,7 +99,7 @@
     column-gap: 1rem;
   }
   .footer {
-    padding: 2rem 3rem 0 3rem;
+    padding: 2rem 3rem 2rem 3rem;
   }
 }
 @media screen and (max-width: 800px) {
@@ -62,7 +109,7 @@
   }
 
   .footer {
-    padding: 2rem 3rem 0 3rem;
+    padding: 2rem 3rem 2rem 3rem;
   }
 }
 @media screen and (max-width: 650px) {
@@ -71,6 +118,17 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 1rem;
     row-gap: 10px;
+  }
+  .footer {
+    flex-direction: column;
+  }
+  .SocialMediaLogos {
+    column-gap: 2rem;
+  }
+  .footerLogos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .SocialMediaLogos {
     height: 25;
@@ -97,4 +155,9 @@
   font-family: var(--ff-primary);
   font-weight: var(--fw-semibold);
   font-size: var(--fs-100);
+}
+@media screen and (max-width: 400px) {
+  .SocialMediaLogos {
+    column-gap: 1rem;
+  }
 }

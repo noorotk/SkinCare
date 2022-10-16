@@ -1,20 +1,35 @@
 import React from "react";
 import classes from "./nav.module.css";
 import ShoppinCartIcon from "./ShoppinCartIcon";
+import { Link } from "react-scroll";
 
-const navItems = (props) => {
+const NavItems = (props) => {
   if (props.sideDrawer) {
     return (
       <div className={classes.navSide}>
         <div className={classes.sideDrawerHeader}>
-          <div className={classes.logo}></div>
           <button className={classes.button}>Log in</button>
         </div>
         <ul className={classes.ulFlex}>
-          <li className={classes.li}>About</li>
-          <li className={classes.li}>Products</li>
-          <li className={classes.li}>Contact</li>
-          <div className={classes.shoppingCart}></div>
+          <li className={classes.li}>
+            <Link to="About" spy={true} offset={50} duration={500}>
+              About
+            </Link>
+          </li>
+          <li className={classes.li}>
+            {" "}
+            <Link to="Products" spy={true} offset={50} duration={500}>
+              Products
+            </Link>
+          </li>
+          <li className={classes.li}>
+            {" "}
+            <Link to="Contact" spy={true} offset={50} duration={500}>
+              Contact
+            </Link>
+          </li>
+
+          <ShoppinCartIcon showModal={props.showModal} />
         </ul>
         <div className={classes.rightButtons}></div>
       </div>
@@ -26,9 +41,34 @@ const navItems = (props) => {
           <img alt="logo" src="Logo.png" />
         </div>
         <ul className={classes.ulFlex}>
-          <li className={classes.li}>About</li>
-          <li className={classes.li}>Products</li>
-          <li className={classes.li}>Contact</li>
+          <li className={classes.li}>
+            <Link to="About" smooth={true} spy={true} offset={0} duration={500}>
+              About
+            </Link>
+          </li>
+          <li className={classes.li}>
+            <Link
+              to="Products"
+              smooth={true}
+              spy={true}
+              offset={0}
+              duration={500}
+            >
+              Products
+            </Link>
+          </li>
+          <li className={classes.li}>
+            {" "}
+            <Link
+              to="Contact"
+              smooth={true}
+              spy={true}
+              offset={0}
+              duration={500}
+            >
+              Contact
+            </Link>
+          </li>
         </ul>
 
         <div className={classes.rightButtons}>
@@ -40,4 +80,4 @@ const navItems = (props) => {
   }
 };
 
-export default navItems;
+export default NavItems;

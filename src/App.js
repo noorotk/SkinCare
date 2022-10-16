@@ -10,6 +10,7 @@ import Footer from "./components/footer/footer";
 import Shop from "./components/Shop/Shop";
 import Container from "./components/ClientsSection/container";
 import Modal from "./components/Modal/Modal";
+import AuthContext from "./components/helper";
 
 function App() {
   const [sideDrawer, setsideDrawer] = useState(false);
@@ -32,7 +33,6 @@ function App() {
   const [cartItems, setCartItems] = useState([]);
 
   const onAdd = (product) => {
-    console.log(product);
     const exist = cartItems.find((x) => x.id === product.id);
     if (exist) {
       setCartItems(
@@ -50,20 +50,12 @@ function App() {
       <Modal cartItems={cartItems} show={ShowModal} close={closeModal}></Modal>
       <Backdrop show={sideDrawer} close={closesideDrawer} />
       <div className="interFace">
-        <Nav open={sideDrawer} show={opensideDrawer} showModal={openModal} />
+        <AuthContext.Provider value={{ cartLength: cartItems.length }}>
+          <Nav open={sideDrawer} show={opensideDrawer} showModal={openModal} />
+        </AuthContext.Provider>
       </div>
 
       <Hero onAdd={onAdd} />
-
-      {/* <div>
-        {!intersection ? "not me" : "its me!"}
-
-        <img
-          ref={targetRef}
-          alt="cerave moist"
-          src={`heroSliderPics/pic-2.png`}
-        />
-      </div> */}
 
       <FeaturesSection />
 

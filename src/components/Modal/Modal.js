@@ -1,9 +1,10 @@
-import React, { Component, Fragment } from "react";
+import React, { Fragment } from "react";
 import Backdrop from "../backdrop/Backdrop";
 import classes from "./Modal.module.css";
 
 const Modal = (props) => {
   const { cartItems } = props;
+  console.log("modal ", cartItems);
   return (
     <Fragment>
       <Backdrop show={props.show} close={props.close} />
@@ -13,25 +14,27 @@ const Modal = (props) => {
           transform: props.show ? "translateY(0)" : "translateY(-100vh)",
           opacity: props.show ? "1" : "0",
         }}
-      ><div className={classes.btnflex}>
-        <div></div>
-        <button className={classes.closeBtn}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="ionicon"
-            viewBox="0 0 512 512"
-          >
-            <title>Close</title>
-            <path
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="32"
-              d="M368 368L144 144M368 144L144 368"
-            />
-          </svg>
-        </button></div>
+      >
+        <div className={classes.btnflex}>
+          <div></div>
+          <button className={classes.closeBtn} onClick={props.close}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="ionicon"
+              viewBox="0 0 512 512"
+            >
+              <title>Close</title>
+              <path
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="32"
+                d="M368 368L144 144M368 144L144 368"
+              />
+            </svg>
+          </button>
+        </div>
         {cartItems.length === 0 ? (
           <div className={classes.empty}>Cart is empty</div>
         ) : (
