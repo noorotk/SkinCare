@@ -4,9 +4,9 @@
   border-radius: 25px;
   background-color: red;
   z-index: 498;
-  position: relative;
-  left: 1.3rem;
-  top: 0.7rem;
+  position: absolute;
+  margin-left: 1.6rem;
+
   font-family: var(--ff-primary);
 }
 .dot p {

@@ -34,6 +34,11 @@
   transition-duration: 0.4s;
   cursor: pointer;
 }
+.singUpBtnContainer button p {
+  position: relative;
+  right: 3.8rem;
+  bottom: 0.3rem;
+}
 .button:hover {
   background-color: var(--clr-primary-500);
 }

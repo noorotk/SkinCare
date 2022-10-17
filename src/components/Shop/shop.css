@@ -89,7 +89,7 @@
 .products {
   border-radius: 25px;
   background-color: var(--clr-primary-600);
-  width: 300px;
+  width: 280px;
   height: 400px;
   padding-bottom: 1rem;
   display: flex;
