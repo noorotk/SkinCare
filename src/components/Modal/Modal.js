@@ -4,7 +4,7 @@ import classes from "./Modal.module.css";
 
 const Modal = (props) => {
   const { cartItems } = props;
-  console.log("modal ", cartItems);
+
   return (
     <Fragment>
       <Backdrop show={props.show} close={props.close} />
@@ -41,7 +41,7 @@ const Modal = (props) => {
           <div>
             {cartItems.map((obj, index) => {
               return (
-                <div className={classes.productContainer}>
+                <div key={obj.key} className={classes.productContainer}>
                   <img alt={obj.title} src={obj.src} />
                   <h1>{obj.title}</h1>
                   <div>{obj.price}$</div>
@@ -63,6 +63,3 @@ const Modal = (props) => {
 };
 
 export default Modal;
-//  <button  className={classes.closeModal}>
-//           close
-//         </button>

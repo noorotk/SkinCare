@@ -3,20 +3,23 @@ import classes from "./nav.module.css";
 import ShoppinCartIcon from "./ShoppinCartIcon";
 import { Link } from "react-scroll";
 import AuthContext from "../helper";
+
 const NavItems = (props) => {
   if (props.sideDrawer) {
     return (
       <AuthContext.Consumer>
-        {(closeDrawer) => {
+        {(data) => {
           return (
             <div className={classes.navSide}>
               <div className={classes.sideDrawerHeader}>
-                <button className={classes.button}>Log in</button>
+                <button onClick={data.showLoginForm} className={classes.button}>
+                  Log in
+                </button>
               </div>
               <ul className={classes.ulFlex}>
                 <li className={classes.li}>
                   <Link
-                    onClick={closeDrawer.closeDrawer}
+                    onClick={data.closeDrawer}
                     smooth={true}
                     to="About"
                     spy={true}
@@ -29,7 +32,7 @@ const NavItems = (props) => {
                 <li className={classes.li}>
                   {" "}
                   <Link
-                    onClick={closeDrawer.closeDrawer}
+                    onClick={data.closeDrawer}
                     smooth={true}
                     to="Products"
                     spy={true}
@@ -42,7 +45,7 @@ const NavItems = (props) => {
                 <li className={classes.li}>
                   {" "}
                   <Link
-                    onClick={closeDrawer.closeDrawer}
+                    onClick={data.closeDrawer}
                     smooth={true}
                     to="Contact"
                     spy={true}

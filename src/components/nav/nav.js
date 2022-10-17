@@ -6,8 +6,6 @@ import ShoppinCartIcon from "./ShoppinCartIcon";
 
 import "react-js-stickynav/dist/index.css";
 
-import { Link } from "react-scroll";
-
 const Nav = (props) => {
   return (
     <div className={classes.navContainer}>

@@ -54,6 +54,7 @@
 }
 
 .shopCategories button {
+  cursor: pointer;
   font-weight: var(--fw-semibold);
   font-size: var(--fs-200);
   height: 60px;
