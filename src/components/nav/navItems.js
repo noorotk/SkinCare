@@ -2,37 +2,62 @@ import React from "react";
 import classes from "./nav.module.css";
 import ShoppinCartIcon from "./ShoppinCartIcon";
 import { Link } from "react-scroll";
-
+import AuthContext from "../helper";
 const NavItems = (props) => {
   if (props.sideDrawer) {
     return (
-      <div className={classes.navSide}>
-        <div className={classes.sideDrawerHeader}>
-          <button className={classes.button}>Log in</button>
-        </div>
-        <ul className={classes.ulFlex}>
-          <li className={classes.li}>
-            <Link to="About" spy={true} offset={50} duration={500}>
-              About
-            </Link>
-          </li>
-          <li className={classes.li}>
-            {" "}
-            <Link to="Products" spy={true} offset={50} duration={500}>
-              Products
-            </Link>
-          </li>
-          <li className={classes.li}>
-            {" "}
-            <Link to="Contact" spy={true} offset={50} duration={500}>
-              Contact
-            </Link>
-          </li>
-
-          <ShoppinCartIcon showModal={props.showModal} />
-        </ul>
-        <div className={classes.rightButtons}></div>
-      </div>
+      <AuthContext.Consumer>
+        {(closeDrawer) => {
+          return (
+            <div className={classes.navSide}>
+              <div className={classes.sideDrawerHeader}>
+                <button className={classes.button}>Log in</button>
+              </div>
+              <ul className={classes.ulFlex}>
+                <li className={classes.li}>
+                  <Link
+                    onClick={closeDrawer.closeDrawer}
+                    smooth={true}
+                    to="About"
+                    spy={true}
+                    offset={0}
+                    duration={500}
+                  >
+                    About
+                  </Link>
+                </li>
+                <li className={classes.li}>
+                  {" "}
+                  <Link
+                    onClick={closeDrawer.closeDrawer}
+                    smooth={true}
+                    to="Products"
+                    spy={true}
+                    offset={0}
+                    duration={500}
+                  >
+                    Products
+                  </Link>
+                </li>
+                <li className={classes.li}>
+                  {" "}
+                  <Link
+                    onClick={closeDrawer.closeDrawer}
+                    smooth={true}
+                    to="Contact"
+                    spy={true}
+                    offset={0}
+                    duration={500}
+                  >
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+              <div className={classes.rightButtons}></div>
+            </div>
+          );
+        }}
+      </AuthContext.Consumer>
     );
   } else {
     return (

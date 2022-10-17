@@ -3,7 +3,7 @@
   height: 20px;
   border-radius: 25px;
   background-color: red;
-  z-index: 900;
+  z-index: 498;
   position: relative;
   left: 1.3rem;
   top: 0.7rem;
@@ -22,7 +22,7 @@
   height: 20px;
   border-radius: 25px;
   background-color: red;
-  z-index: 1000;
+  z-index: 498;
   position: relative;
   left: 1.3rem;
   top: 0.7rem;
@@ -43,7 +43,7 @@
   height: 20px;
   border-radius: 25px;
   background-color: red;
-  z-index: 1000;
+  z-index: 499;
   position: relative;
   left: 1.3rem;
   top: 0.7rem;

@@ -50,7 +50,9 @@ function App() {
       <Modal cartItems={cartItems} show={ShowModal} close={closeModal}></Modal>
       <Backdrop show={sideDrawer} close={closesideDrawer} />
       <div className="interFace">
-        <AuthContext.Provider value={{ cartLength: cartItems.length }}>
+        <AuthContext.Provider
+          value={{ cartLength: cartItems.length, closeDrawer: closesideDrawer }}
+        >
           <Nav open={sideDrawer} show={opensideDrawer} showModal={openModal} />
         </AuthContext.Provider>
       </div>
